@@ -21,40 +21,41 @@ if __name__ == '__main__':
     flameSize = 130         # the length of the flaming arms
     
     # Make a new turtle
-    
+    turt = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    turt.shape('turtle')
     # Set the turtle width to 2
-    
+    turt.width(2)
     # Set the turtle speed to 0 (fastest)
-    
+    turt.speed(0)
     # Use a for loop to repeat all of the code below ONE time (we will change
     # this later)
-        
+    for i in range(25):
+        turt.fillcolor('orange')
+        turt.begin_fill()
+        turt.right(360/8)
+        turt.forward(64)
+        turt.left(40)
+        turt.forward(flameSize)
+        turt.right(170)
+        turt.forward(flameSize)
+        turt.right(62)
+        turt.forward(baseSize)
+        turt.end_fill()
+turt.hideturtle()
         # Set the turtle .fillcolor() to orange
-        
         # Call the turtle .begin_fill() function
-        
         # TURN RIGHT     Turn the turtle 1/8 of a circle (hint: 360 degrees
         #                will turn a full circle)
-        
         # DRAW           Move the turtle 64 pixels
-        
         # TURN LEFT      Turn the turtle 40 degrees to the LEFT. (Negative
         #                numbers will turn the turtle counter-clockwise.)
-        
         # DRAW FLAME     Move the turtle the distance in the variable flameSize
-        
         #                Turn the turtle to the right 170 degrees
-         
         #                Move the turtle the distance in the variable flameSize (again)
-         
         #  TURN RIGHT    Turn the turtle 62 degrees to the right
-        
         #  DRAW          Move the turtle the distance in the variable baseSize
-        
         # Call the turtle .end_fill() method
-        
     # Hide your turtle so you can see the pattern.
         
     # TEST   Run the program. Check that your shape is the same as the first
@@ -68,4 +69,4 @@ if __name__ == '__main__':
     #        repeat 25 times.
     
     # call the turtle .done() method
-    turtle.done()
+turtle.done()
